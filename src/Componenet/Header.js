@@ -179,7 +179,7 @@ function Home() {
                     <MenuContent>CONTACT</MenuContent>
                     </Menu2>
                 </ModalWrapper>
-                <ModalOpacity/>
+                <ModalOpacity onClick={onToggle}/>
             </Wrapper>
         </>
     )
