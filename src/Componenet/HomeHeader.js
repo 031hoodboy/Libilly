@@ -5,7 +5,6 @@ import Cancle from '../images/cancle.png';
 import ProfileImg from '../images/user.png';
 import CartImg from '../images/shopping-bag2.png';
 import MenuIcon from '../images/menu.png';
-import LibillyLogo from '../images/logo.png'
 
 const Menu = styled.div`
     width: 30px;
@@ -156,18 +155,6 @@ const MenuContent = styled.div`
     width: 150px;
 `;
 
-const LibillyHome = styled.div`
-    margin-top: 10px;
-    width: 158px;
-    height: 30px;
-    cursor: pointer;
-    background-image: url(${LibillyLogo});
-    background: cover;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-`;
-
 function Home() {
     const [open, setOpen] = useState(false);
     const onToggle = () => {
@@ -177,9 +164,6 @@ function Home() {
         <>
             <HeaderWrappr>
                 <Menu onClick={onToggle}/>
-                <Link to="/" style={{textDecoration: 'none', color: "#000"}}>
-                    <LibillyHome/>
-                </Link>
                 <RightContnet>
                     <Link to="/cart" style={{textDecoration: 'none', color: "#000"}}>
                         <Cart/>

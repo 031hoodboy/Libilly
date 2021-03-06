@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
-import Header from '../Componenet/Header';
+import HomeHeader from '../Componenet/HomeHeader';
 import Content from '../HomeComponent/Content';
 
 const CenterAligne = styled.div`
@@ -21,8 +21,7 @@ function Home() {
         <>
         <GlobalStyle/>
         <CenterAligne>
-            <Header>
-            </Header>
+            <HomeHeader></HomeHeader>
             <Content/>
         </CenterAligne>
         </>
