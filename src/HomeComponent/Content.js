@@ -8,6 +8,7 @@ const MyName = styled.div`
     bottom: 0;
     font: italic 12px serif;
     margin: 10px;
+    color: #555;
 `;
 
 const Wrapper = styled.div`

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styled, {css} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 import Cancle from '../images/cancle.png';
 import ProfileImg from '../images/user.png';
 import CartImg from '../images/shopping-bag2.png';
@@ -73,6 +73,25 @@ const Wrapper = styled.div`
     `}
 `;
  
+const Fadein = keyframes`
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 0px;
+  }
+`;
+
+const Fadeout = keyframes`
+    0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+`;
+
 const ModalWrapper = styled.div`
     width: 200px;
     height: 100vh;
@@ -82,18 +101,24 @@ const ModalWrapper = styled.div`
     top: 0;
     display: flex;
     justify-content: center;
+    animation: ${Fadein} 500ms ;
+
     ${props => props.open && css`
         display:flex;
+        animation: ${Fadeout} 1s ;
+
     `}
 `;
+
+
 
 const ModalOpacity = styled.div`
     width: 100vw;
     height: 100vh;
-    background-color: #e0e0e0;
+    background-color: #000;
     position: absolute;
     top: 0;
-    opacity: 0.3;
+    opacity: 0.1;
 `;
 
 const CancleButton = styled.div`
