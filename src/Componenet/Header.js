@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styled, {css, keyframes} from 'styled-components';
+import {Route,Link} from 'react-router-dom';
 import Cancle from '../images/cancle.png';
 import ProfileImg from '../images/user.png';
 import CartImg from '../images/shopping-bag2.png';
@@ -164,19 +165,35 @@ function Home() {
             <HeaderWrappr>
                 <Menu onClick={onToggle}/>
                 <RightContnet>
-                    <Cart/>
-                    <Profile/>
+                    <Link to="/cart" style={{textDecoration: 'none', color: "#000"}}>
+                        <Cart/>
+                    </Link>
+                    <Link to="/profile" style={{textDecoration: 'none', color: "#000"}}>
+                        <Profile/>
+                    </Link>
                 </RightContnet>
             </HeaderWrappr>
             <Wrapper open={open}>
                 <ModalWrapper>
                     <CancleButton onClick={onToggle}/>
                     <Menu2>
-                    <MenuContent>HOME</MenuContent>
-                    <MenuContent>SHOP</MenuContent>
-                    <MenuContent>ABOUT</MenuContent>
-                    <MenuContent>NOTICE</MenuContent>
-                    <MenuContent>CONTACT</MenuContent>
+                    <Link to="/" style={{textDecoration: 'none', color: "#000"}}>
+                        <MenuContent>HOME</MenuContent>    
+                    </Link>
+                    <Link to='/shop' style={{textDecoration: 'none', color: "#000"}}>
+                        <MenuContent>SHOP</MenuContent>
+                    </Link>
+                    <Link to="/about" style={{textDecoration: 'none', color: "#000"}}>
+                        <MenuContent>ABOUT</MenuContent>    
+                    </Link>
+                    
+                    <Link to="/notice" style={{textDecoration: 'none', color: "#000"}}>
+                        <MenuContent>NOTICE</MenuContent>        
+                    </Link>
+                    
+                    <Link to="contact" style={{textDecoration: 'none', color: "#000"}}>
+                        <MenuContent>CONTACT</MenuContent>
+                    </Link>
                     </Menu2>
                 </ModalWrapper>
                 <ModalOpacity onClick={onToggle}/>
