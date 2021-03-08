@@ -83,15 +83,7 @@ const Fadein = keyframes`
   }
 `;
 
-const Fadeout = keyframes`
-    0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-`;
+
 
 const ModalWrapper = styled.div`
     width: 200px;
@@ -106,8 +98,6 @@ const ModalWrapper = styled.div`
 
     ${props => props.open && css`
         display:flex;
-        animation: ${Fadeout} 1s ;
-
     `}
 `;
 
@@ -155,22 +145,95 @@ const MenuContent = styled.div`
     width: 150px;
 `;
 
+const Appear = keyframes`
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+`;
+
+const ProfileModal = styled.div`
+    width: 300px;
+    height: 200px;
+    background: #000;
+    z-index: 1;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 2px solid #f5f5f5;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    bottom: 0;
+    /*box-shadow:  10px 10px 13px #ededed,
+             -10px -10px 13px #ffffff; */
+    display: none;
+    ${props => props.open && css`
+        display:flex;
+    `}
+    animation: ${Appear} 0.3s;
+
+`;
+
+const ModalProfileImg = styled.div`
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-image: url(${ProfileImg});
+    background: cover;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    
+`;
+
+const MyPage = styled.div`
+    padding: 30px 20px;
+    cursor: pointer;
+`;
+
+const LogIn = styled.div`
+    padding: 30px 20px;
+    cursor: pointer;
+
+`;
+
+const ButtonWrapper = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    bottom: 0;
+`;
 function Home() {
     const [open, setOpen] = useState(false);
     const onToggle = () => {
         setOpen(!open)
     }
+
+    const [profileOpen, setProfileOpen] = useState(false);
+    const onProfile = () => {
+        setProfileOpen(!profileOpen)
+    }
+    
+    /*                    
+    <Link to="/profile" style={{textDecoration: 'none', color: "#000"}}>
+    <Profile/>
+    </Link> */
     return (
         <>
             <HeaderWrappr>
-                <Menu onClick={onToggle}/>
+                <Menu onClick={onToggle} />
                 <RightContnet>
                     <Link to="/cart" style={{textDecoration: 'none', color: "#000"}}>
                         <Cart/>
                     </Link>
-                    <Link to="/profile" style={{textDecoration: 'none', color: "#000"}}>
-                        <Profile/>
-                    </Link>
+                        <Profile onClick={onProfile}/>
                 </RightContnet>
             </HeaderWrappr>
             <Wrapper open={open}>
@@ -198,6 +261,24 @@ function Home() {
                 </ModalWrapper>
                 <ModalOpacity onClick={onToggle}/>
             </Wrapper>
+            <ProfileModal open={profileOpen}>
+                <ModalProfileImg/>
+
+                <ButtonWrapper>
+                    <Link to="/mypage" style={{textDecoration: "none", color: "#000"}}>
+                        <MyPage>
+                            마이페이지
+                        </MyPage>
+                    </Link>
+                    <Link to="/login" style={{textDecoration: "none", color: "#000"}}>
+                        <LogIn>
+                            로그인
+                        </LogIn>
+                    </Link>
+                </ButtonWrapper>
+
+            </ProfileModal>
+
         </>
     )
 }

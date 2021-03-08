@@ -24,7 +24,7 @@ const Counter = styled.div`
 
 const ItemHeader = styled.div`
     display: flex;
-    width: 85vw;
+    width: 80vw;
     justify-content: space-between;
     font-size: 14px;
     align-items: center;
@@ -106,13 +106,11 @@ function Cart() {
                 <ItemHeader>
                     <Item>Item</Item>
                     <ItemHeaderContentWrapper>
-                        <ItemHeaderContent>위시</ItemHeaderContent>
                         <ItemHeaderContent>수량</ItemHeaderContent>
                         <ItemHeaderContent>배송수단</ItemHeaderContent>
                         <ItemHeaderContent>배송비</ItemHeaderContent>
                     </ItemHeaderContentWrapper>
                     <Price>가격</Price>
-
                 </ItemHeader>
                 <Shopping>
                     <CartImg/>

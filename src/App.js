@@ -6,6 +6,8 @@ import Profile from './page/Profile';
 import Notice from './page/Notice';
 import Contact from './page/Contact';
 import Cart from './page/Cart';
+import Login from './page/Login';
+import Mypage from './page/Mypage';
 
 const App = () => {
   return (
@@ -19,6 +21,9 @@ const App = () => {
           <Route path="/shop" component={Shop}/>
           <Route path="/notice" component={Notice}/>
           <Route path="/contact" component={Contact}/>
+
+          <Route path="/login" component={Login}/>
+          <Route path="/mypage" component={Mypage}/>
 
       </Switch>
   </BrowserRouter>
