@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from '../Componenet/Header';
 
 const Test = styled.div`
     width: 100vw;
@@ -9,7 +10,10 @@ const Test = styled.div`
 
 function Shop() {
     return (
+        <>
+        <Header/>
         <Test/>
+        </>
     )
 }
 

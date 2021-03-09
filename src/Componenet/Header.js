@@ -105,7 +105,7 @@ const ModalWrapper = styled.div`
     width: 200px;
     height: 100vh;
     background-color: #fff;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     top: 0;
     display: flex;
@@ -127,6 +127,7 @@ const ModalOpacity = styled.div`
     position: absolute;
     top: 0;
     opacity: 0.1;
+    z-index: 1;
 `;
 
 const CancleButton = styled.div`
@@ -166,7 +167,6 @@ const ProfileModal = styled.div`
     width: 300px;
     height: 200px;
     background: #000;
-    z-index: 1;
     position: absolute;
     right: 20px;
     top: 60px;
