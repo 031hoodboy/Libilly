@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from '../Componenet/Header';
+import Header from '../Componenet/HomeHeader';
 import styled from 'styled-components';
+import LogoImg from '../images/logo.png';
 
 const Wrapper = styled.div`
     margin: 0 auto;
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
 
 const Id = styled.input`
     outline: none;
-    width: 100%;
+    width: 80%;
     height: 5vh;
     font-size: 20px;
     padding: 0 1vw;
@@ -25,12 +26,12 @@ const Password = styled(Id)`
 `;
 
 const LoginButton = styled.div`
-    margin-top: 40px;
+    margin-top: 60px;
     outline: none;
     height: 5vh;
     font-size: 20px;
     padding: 0 1vw;
-    width: 70%;
+    width: 60%;
     background: #000;
     border-radius: 3px;
     color: #fff;
@@ -47,11 +48,22 @@ const JoinButton =styled(LoginButton)`
     margin-top: 1vh;
 `;
 
+const Logo = styled.div`
+    width: 45vw;
+    height: 200px;
+    background-image: url(${LogoImg});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+    margin: 10vh 0;
+`;
+
 function Login () {
     return (
         <>
         <Header/>
         <Wrapper>
+            <Logo/>
             <Id placeholder="아이디" />
             <Password placeholder="비밀번호" />
             <LoginButton>

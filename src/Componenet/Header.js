@@ -203,11 +203,13 @@ const ModalProfileImg = styled.div`
 
 const MyPage = styled.div`
     padding: 30px 20px;
+    margin: 0 auto;
     cursor: pointer;
 `;
 
 const LogIn = styled.div`
     padding: 30px 20px;
+    margin: 0 auto;
     cursor: pointer;
 
 `;
