@@ -17,6 +17,7 @@ const Menu = styled.div`
     &:hover{
         opacity: 0.6;
     }
+        z-index: 1;
 `;
 
 const HeaderWrappr = styled.div`
@@ -28,7 +29,6 @@ const HeaderWrappr = styled.div`
     position: absolute;
     top: 0;
     padding: 0 2.5vw;
-    
 `;
 
 const RightContnet = styled.div`
@@ -95,6 +95,7 @@ const ModalWrapper = styled.div`
     display: flex;
     justify-content: center;
     animation: ${Fadein} 500ms ;
+    z-index: 2;
 
     ${props => props.open && css`
         display:flex;
@@ -110,6 +111,7 @@ const ModalOpacity = styled.div`
     position: absolute;
     top: 0;
     opacity: 0.1;
+    z-index: 1;
 `;
 
 const CancleButton = styled.div`
@@ -158,7 +160,6 @@ const ProfileModal = styled.div`
     width: 300px;
     height: 200px;
     background: #000;
-    z-index: -1;
     position: absolute;
     right: 20px;
     top: 60px;
@@ -177,6 +178,7 @@ const ProfileModal = styled.div`
         display:flex;
     `}
     animation: ${Appear} 0.3s;
+
 `;
 
 const ModalProfileImg = styled.div`
