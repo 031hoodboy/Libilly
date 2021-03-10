@@ -18,6 +18,7 @@ const Wrapper = styled.div`
     font-weight: 600;
     align-items: center;
     display: flex;
+    z-index: -2;
 `;
 
 const Logo = styled.div`

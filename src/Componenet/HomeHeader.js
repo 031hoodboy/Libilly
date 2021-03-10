@@ -158,7 +158,7 @@ const ProfileModal = styled.div`
     width: 300px;
     height: 200px;
     background: #000;
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     right: 20px;
     top: 60px;
@@ -177,7 +177,6 @@ const ProfileModal = styled.div`
         display:flex;
     `}
     animation: ${Appear} 0.3s;
-
 `;
 
 const ModalProfileImg = styled.div`
