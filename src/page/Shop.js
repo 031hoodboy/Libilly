@@ -7,6 +7,7 @@ import LbMtmImg from '../images/lbmtm.png';
 import LbPantsImg from '../images/lbpants.png';
 import Ma1Img from '../images/ma1.png';
 import ShortSleeveImg from '../images/031shortsleeve.png';
+import SocksImg from '../images/socks.png';
 
 const ShopBlock = styled.div`
     width: 100vw;
@@ -61,6 +62,11 @@ const ShortSleeve = styled(Hoddie)`
     background-image: url(${ShortSleeveImg});
 `;
 
+const Socks = styled(Hoddie)`
+    background-image: url(${SocksImg});
+`;
+
+
 
 function Shop() {
     return (
@@ -74,6 +80,7 @@ function Shop() {
                 <LbPants></LbPants>
                 <Ma1></Ma1>
                 <ShortSleeve></ShortSleeve>
+                <Socks></Socks>
             </ShopWrapper>
         </ShopBlock>
         </>
