@@ -67,12 +67,15 @@ const Cart = styled.div`
 
 const Wrapper = styled.div`
     display: flex;
-    width: 100vh;
+    width: 100vw;
     display: none;
     justify-content: space-between;
     ${props => props.open && css`
         display:flex;
     `}
+    position: sticky;
+    z-index: 2;
+    top: 0;
 `;
  
 const Fadein = keyframes`
@@ -105,7 +108,7 @@ const ModalWrapper = styled.div`
     width: 200px;
     height: 100vh;
     background-color: #fff;
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     top: 0;
     display: flex;
@@ -127,7 +130,7 @@ const ModalOpacity = styled.div`
     position: absolute;
     top: 0;
     opacity: 0.1;
-    z-index: 1;
+    z-index: 2;
 `;
 
 const CancleButton = styled.div`
@@ -185,7 +188,7 @@ const ProfileModal = styled.div`
         display:flex;
     `}
     animation: ${Appear} 0.3s;
-
+    z-index: 1;
 `;
 
 const ModalProfileImg = styled.div`
