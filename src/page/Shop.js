@@ -31,7 +31,6 @@ const ShopWrapper = styled.div`
 const Hoddie = styled.div`
     width: 250px;
     height: 250px;
-    background: red;
     margin: 20px auto;
     background-image: url(${Hodie031Img});
     background-size: contain;
@@ -41,6 +40,11 @@ const Hoddie = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;  
+    &:hover{
+        transform: scale(1.07); 
+    }
 `;
 
 const DogHoddie = styled(Hoddie)`
