@@ -17,7 +17,6 @@ const Menu = styled.div`
     &:hover{
         opacity: 0.6;
     }
-        z-index: 1;
 `;
 
 const HeaderWrappr = styled.div`
@@ -69,6 +68,8 @@ const Wrapper = styled.div`
     width: 100vh;
     display: none;
     justify-content: space-between;
+    position: fixed;
+    top: 1;
     ${props => props.open && css`
         display:flex;
     `}
@@ -90,7 +91,7 @@ const ModalWrapper = styled.div`
     height: 100vh;
     background-color: #fff;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
@@ -277,9 +278,7 @@ function Home() {
                         </LogIn>
                     </Link>
                 </ButtonWrapper>
-
             </ProfileModal>
-
         </>
     )
 }

@@ -73,7 +73,7 @@ const Wrapper = styled.div`
     ${props => props.open && css`
         display:flex;
     `}
-    position: sticky;
+    position: fixed;
     z-index: 2;
     top: 0;
 `;
@@ -114,7 +114,6 @@ const ModalWrapper = styled.div`
     display: flex;
     justify-content: center;
     animation: ${Fadein} 500ms ;
-
     ${props => props.open && css`
         display:flex;
         animation: ${Fadeout} 2s;
@@ -136,7 +135,6 @@ const ModalOpacity = styled.div`
 const CancleButton = styled.div`
     width: 30px;
     height: 30px;
-
     background-image: url(${Cancle});
     background-size: contain;
     background-repeat: no-repeat;
@@ -144,7 +142,6 @@ const CancleButton = styled.div`
     position: absolute;
     left: 20px;
     top: 20px;
-
     &:hover{
         opacity: 0.4;
     }
@@ -200,7 +197,6 @@ const ModalProfileImg = styled.div`
     background-size: 90% 90%;
     background-repeat: no-repeat;
     background-position: center center;
-
     
 `;
 
@@ -214,7 +210,6 @@ const LogIn = styled.div`
     padding: 30px 20px;
     margin: 0 auto;
     cursor: pointer;
-
 `;
 
 const ButtonWrapper = styled.div`
@@ -237,7 +232,7 @@ const LibillyHome = styled.div`
     background-position: center center;
 `;
 
-function Home() {
+function Header() {
     const [open, setOpen] = useState(false);
     const onToggle = () => {
         setOpen(!open)
@@ -314,4 +309,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Header;

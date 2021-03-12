@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link} from 'react-router-dom';
 import Header from '../Componenet/Header';
 import ShoppingCartImg from '../images/shopping-cart.png';
+import Footer from '../Componenet/Footer';
 const CartWrapper = styled.div`
     width: 90vw;
     height: 100vh;
@@ -124,6 +125,7 @@ function Cart() {
                     </ShoppingButtonWrapper>
                 </Link> 
             </CartWrapper>
+            <Footer/>
         </>
     )
 }
