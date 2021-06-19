@@ -275,11 +275,11 @@ function Header() {
                     <Link to="/about" style={{textDecoration: 'none', color: "#000"}}>
                         <MenuContent>ABOUT</MenuContent>    
                     </Link>
-                    
+{/*                     
                     <Link to="/notice" style={{textDecoration: 'none', color: "#000"}}>
                         <MenuContent>NOTICE</MenuContent>        
                     </Link>
-                    
+                     */}
                     <Link to="contact" style={{textDecoration: 'none', color: "#000"}}>
                         <MenuContent>CONTACT</MenuContent>
                     </Link>

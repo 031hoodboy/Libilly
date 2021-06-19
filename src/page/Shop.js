@@ -8,6 +8,7 @@ import LbPantsImg from '../images/lbpants.png';
 import Ma1Img from '../images/ma1.png';
 import ShortSleeveImg from '../images/031shortsleeve.png';
 import SocksImg from '../images/socks.png';
+import {Link} from 'react-router-dom';
 
 const ShopBlock = styled.div`
     width: 100vw;
@@ -78,7 +79,9 @@ function Shop() {
         <Header/>
         <ShopBlock>
             <ShopWrapper>
-                <Hoddie></Hoddie>
+                <Link to="/hoodie" style={{textDecoration: "none", color: "#000"}}>
+                    <Hoddie></Hoddie>
+                </Link>
                 <DogHoddie></DogHoddie>
                 <LbMtm></LbMtm>
                 <LbPants></LbPants>

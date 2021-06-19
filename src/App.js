@@ -9,6 +9,7 @@ import Cart from './page/Cart';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
 import About from './page/About';
+import Hoodie from './page/Hoodie';
 
 
 const App = () => {
@@ -16,18 +17,15 @@ const App = () => {
     <BrowserRouter>
       <Switch>      
           <Route path="/" component={Home} exact/>
-
           <Route path="/cart" component={Cart}/>
           <Route path="/profile" component={Profile}/>
-
           <Route path="/shop" component={Shop}/>
           <Route path="/notice" component={Notice}/>
           <Route path="/contact" component={Contact}/>
           <Route path="/about" component={About} />
-
           <Route path="/login" component={Login}/>
           <Route path="/mypage" component={Mypage}/>
-
+          <Route path="/hoodie" component={Hoodie} />
       </Switch>
   </BrowserRouter>
   )

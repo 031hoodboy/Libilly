@@ -73,6 +73,7 @@ const Wrapper = styled.div`
     ${props => props.open && css`
         display:flex;
     `}
+    z-index: 1;
 `;
  
 const Fadein = keyframes`
@@ -179,7 +180,7 @@ const ProfileModal = styled.div`
         display:flex;
     `}
     animation: ${Appear} 0.3s;
-
+    z-index: 0;
 `;
 
 const ModalProfileImg = styled.div`

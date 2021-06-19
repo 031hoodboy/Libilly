@@ -11,6 +11,9 @@ const FooterBlock = styled.div`
     font-size: 0.8em;
     color: #888;
     flex-direction: column;
+    @media screen and (max-width: 800px) {
+        font-size: 0.5em;
+    }
 
 `;
 
