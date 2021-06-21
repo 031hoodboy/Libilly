@@ -1,6 +1,5 @@
 import React from 'react';
-import styled, {css} from 'styled-components';
-import {Route,Link} from 'react-router-dom';
+import styled from 'styled-components';
 
 const FooterBlock = styled.div`
     width: 100vw;

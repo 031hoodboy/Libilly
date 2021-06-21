@@ -15,7 +15,6 @@ const RightNav = styled.div`
     display: inline-block;
     display: flex;
     flex-direction: column;
-
 `;
 
 const NavContent = styled.span`

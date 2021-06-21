@@ -27,11 +27,7 @@ const HoddieDiv = styled.div`
 width: 100%;
     height: 3000px;
     background-image: url(${HoodieImg});
-
-
 `;
-
-
 
 function Hoddie() {
     return (

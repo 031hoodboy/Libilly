@@ -11,7 +11,6 @@ import Mypage from './page/Mypage';
 import About from './page/About';
 import Hoodie from './page/Hoodie';
 
-
 const App = () => {
   return (
     <BrowserRouter>

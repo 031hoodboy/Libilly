@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled, {css, keyframes} from 'styled-components';
-import {Route,Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Cancle from '../images/cancle.png';
 import ProfileImg from '../images/user.png';
 import CartImg from '../images/shopping-bag2.png';
